@@ -1,4 +1,4 @@
-
+# LOLCODE Interpreter Python App
 ## Installation
 
 * to install the tkinter dependency
@@ -18,3 +18,6 @@ python main.py
 ```
 python .\frontend\main.py
 ```
+
+## Screenshots
+![image](https://github.com/bernardjezua/LOLCODE-Interpreter/assets/90602869/1839d1e1-8d9a-4854-b248-92f0be677ca6)
