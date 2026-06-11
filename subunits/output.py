@@ -7,7 +7,7 @@ class Output():
         
 
     def main(self):
-        self.__concat("^\+ ")
+        self.__concat("^(\\+|AN) ")
         self.tab.terminal += self.concat
 
     def concatination(self):
@@ -28,7 +28,7 @@ class Output():
                 break
             if (self.pars.get_rid_new_line(error= False, match=True) or
                 (self.pars.get_rid("^\+ ","delimiter", match=True) and delimiter == "^AN ")): # if there is new line
-                if delimiter == "^\+ ":
+                if delimiter != "^AN ":
                     self.concat+= "\n"
                 break
 

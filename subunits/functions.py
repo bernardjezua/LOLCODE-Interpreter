@@ -76,7 +76,7 @@ class Functions():
                 break
             
             if not instantiation and not self.pars.get_rid(delimiter, "delimeter", match = True):
-                self.pars.get_rid("^MKAY", "delimeter", "There must be an MKAY delimeter")
+                self.pars.get_rid("^MKAY", "delimeter")
                 break
 
             self.pars.get_rid(delimiter, "delimeter",f"There must be a delimeter '{delimiter}'")

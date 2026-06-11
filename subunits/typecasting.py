@@ -18,9 +18,9 @@ class Typecasting():
 
         self.pars.get_rid("^([a-zA-Z][a-zA-Z0-9_]*) ?", "variable", "there should be a variable")
         value = s.Variable(self.tab, self).get_var()
-        self.pars.get_rid("^A ", "delimeter", "there should be an A delimeter")
+        self.pars.get_rid("^A ", "delimeter")
 
-        self.typecast(value)
+        return self.typecast(value)
         
     def typecast(self,value):
         self.pars.get_rid("^(NUMBR|NUMBAR|YARN|TROOF)?", "type literal", "there should be a type literal")

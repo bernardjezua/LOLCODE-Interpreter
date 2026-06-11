@@ -52,8 +52,18 @@ class Variable():
         var_name = self.tab.capture_group[0]
         val = self.get_var()
 
-        if type(val).__qualname__ == 'str' :
-            self.tab.semantic_error(f"The variable {var_name} is a YARN")
+        if val is None:
+            return 0
+
+        if isinstance(val, str):
+            try:
+                if '.' in val:
+                    return float(val)
+                else:
+                    return int(val)
+            except ValueError:
+                self.tab.semantic_error(f"The variable {var_name} is a YARN and cannot be cast to a number")
         
         return val
+
 
